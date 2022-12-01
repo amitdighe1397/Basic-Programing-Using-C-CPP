@@ -1,0 +1,767 @@
+Que No 1 Write a c program to find the sum of all elements of an array
+#include<stdio.h>
+
+void main()
+{
+	int arr[100],i,n,sum=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+		for (i = 0; i < n; i++)
+		{
+			printf("Enter a array element:");
+			scanf_s("%d", &arr[i]);
+		}
+		for (i = 0; i < n; i++)
+		{
+			sum = sum + arr[i];
+		}
+		printf("Addition=%d", sum);
+
+}
+
+Que No 2 Write a c program to count the number of elements less than,greater than and equal to zero 
+#include<stdio.h>
+
+void main()
+{
+	int arr[100], i, n,positive=0,negative=0,zero=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &arr[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (arr[i] >0)
+		{
+			positive++;
+
+		}
+		else if(arr[i]<0)
+		{
+			negative++;
+		}
+		else if(arr[i]==0)
+		{
+			zero++;
+		}
+	}
+	printf("Positive number:%d\n",positive);
+	printf("Negative number:%d\n", negative);
+	printf("Zero number:%d\n", zero);
+
+}
+
+Que no 3 write c program that return the position of palindrom element in array
+ 
+#include<stdio.h>
+
+void main()
+{
+	int a[20], n, i, rev = 0, temp, rem;
+	printf("enter size of array");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array elements");
+		scanf_s("%d", &a[i]);
+	}
+	printf("elements in array are :\n");
+	for (i = 0; i < n; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		temp = a[i];
+		rev = 0;
+		while (temp != 0)
+		{
+			rem = temp % 10;
+			rev = rev * 10 + rem;
+			temp = temp / 10;
+		}
+		if (a[i] == rev)
+		{
+			printf("\n%d is pallindrome element position at %d index", a[i], i);
+		}
+	}
+}
+
+Que no 4 Write a c program to sort first half of array in ascending order and second half descending order
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int  i, n,j,temp=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n/2; i++)
+	{
+		for (j =i+1; j < n; j++)
+		{
+			if (a[i]>a[j])
+			{
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
+	for (i = n / 2; i < n -1; i++)
+	{
+		for (j = i+1; j < n; j++)
+		{
+			if (a[i] < a[j])
+			{
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("%d\n", a[i]);
+	}
+
+}
+
+Que no 5 Write a c proram to cophy the elements of one array into another array 
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int b[100],i,n;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	     b[i] = a[i];
+	for (i = 0; i < n; i++)
+	{
+		printf("first array=%d\n", a[i]);
+		
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("Second array=%d\n", a[i]);
+
+	}
+
+}
+
+Que no 6 Write a c program to sort only evan number in array
+#include<stdio.h>
+void main()
+{
+	int arr[100], i, n, j, temp;
+	printf("enter how many numbers you want to insert\n");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &arr[i]);
+	}
+	printf("before sorting elements are :");
+	for (i = 0; i < n; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = i + 1; j < n; j++)
+		{
+			if (arr[i] % 2 == 0 && arr[j] % 2 == 0 && arr[i] > arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	printf("\nonly even numbers arranged in ascending order in array:\n");
+	for(i = 0; i < n; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+}
+
+Que no 7 Write a c program to seprate odd and evan integer in same array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, j, n, temp = 0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n-1; i++)
+	{
+		for (j = i + 1; j < n; j++)
+		{
+			if (a[i]%2!=0)
+			{
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+
+			}
+		}
+
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("Sorted array:%d\n", a[i]);
+	}
+}
+
+Que no 8 Write a c program to count the frequency of each elements of an array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, j, n,count;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n ; i++)
+	{
+		     count = 0;
+		for (j = 0; j < n; j++)
+		{
+
+			if (a[i] == a[j])
+			{
+				count++;
+			}
+		}
+		printf("\nfreqency:%d = %d",a[i], count);
+
+	}
+
+}
+
+Que no 9 Write a c program to print all unique elements in array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, j, n;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+			if (a[0] != a[i])
+			{
+				printf("Unique no in array:%d\n",a[i]);
+			}
+	}
+}
+
+Que no 10 Write a c program to to insert new value in the array (sorted list)
+#include<stdio.h>
+
+void main()
+{
+	int a[20], i, j, n, temp, num;
+	printf("enter a value of n\n");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array elements");
+		scanf_s("%d", &a[i]);
+	}
+	printf("\nenter element you want to insert : ");
+	scanf_s("%d", &num);
+	for (i = 0; i < n; i++)
+	{
+		for (j = i + 1; j < n; j++)
+		{
+			if (a[i] > a[j])
+			{
+				temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		}
+	}
+    for(i = 0 ; i < n ; i++)
+    {
+		if (num < a[i])
+		{
+			temp = i; break;
+		}
+    }
+    for(i = n ; i >= temp ; i--)
+    {
+
+         a[i] = a[i-1];
+        if(i == temp)
+        {
+           a[i] = num;
+        }
+    }
+	for (i = 0; i <= n; i++)
+	{
+		printf("%d ", a[i]);
+	}
+}
+
+Que no 11 Write a c program delete an elementat desier position an array
+#include<stdio.h>
+
+void main()
+{
+	int a[20], i, n, num;
+	printf("enter a value of n:\n");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter  arrray elements");
+		scanf_s("%d", &a[i]);
+	}
+	  
+	     printf("Enter a delete position   : ");
+	     scanf_s("%d", &num);
+	
+		 for (i = num - 1; i < n - 1; i++)
+		 {
+			 a[i] = a[i + 1];
+		 }
+	    for (i = 0; i < n - 1; i++)
+       	{
+	       	printf("%d", a[i]);
+	    }
+	
+}
+
+Que no 12 Write a c program to find the maximum and minimum in array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, n, max = 0, min = 0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (a[0] < a[i])
+		{
+			a[0] = a[i];
+		}
+	}
+	printf("Maximum=%d\n", a[0]);
+	for (i = 0; i < n; i++)
+	{
+		if (a[0] > a[i])
+		{
+			a[0] = a[i];
+		}
+	}
+	printf("Minimum=%d\n", a[0]);
+
+}
+
+Que no 13 Write a c program to to find the second largest element in array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, n,max=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (a[0] < a[i])
+		{
+			max = a[i];
+		}
+		for (i = 0; i < n; i++)
+		{
+			if (max == a[i])
+			{
+				i++;
+			}
+			else if(a[0]<a[i])
+			{
+				max = a[i];
+
+
+			}
+		}
+		printf("Second largest element is:%d\n", max);
+	}
+}
+
+Que no 14 write a c progran to find the number of elements in an array
+#include<stdio.h>
+
+void main()
+{
+	int a[100];
+	int i, n, count = 0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		count++;
+	}
+	printf("Number of elements in array=%d", count);
+}
+
+Que.15: Check array bounds while inputing elements in an array
+#include<stdio.h>
+
+void main()
+{
+	int a[5],i=0,cnt=0 ; 
+	printf("count = %d", cnt);
+	printf("\nenter elements in array are :\n");
+	while (1)
+	{
+		if (i == cnt)
+		{
+			printf("array bound !!");
+
+			break;
+		}
+		scanf_s("%d", &a[i]);
+		i++;
+	}
+}
+
+Que no 16 write a c program to print the Alternate elements in an array
+#include<stdio.h>  
+
+void main()
+{
+	int a[100];
+	int i, n;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i+=2)
+	{
+			printf("%d\n", a[i]);
+			
+	}
+
+}
+
+Que.17: Print 2 elements in array such that difference between them is largest
+#include<stdio.h>
+
+void main()
+{
+	int a[20],i,n,min,max;
+	printf("enter how many numbers you want to insert\n");
+	scanf_s("%d", &n);
+	printf("enter %d elements", n);
+	for(i = 0; i < n; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	min = a[0];
+	for(i = 0; i < n; i++)
+	{
+		if(a[i] < min)
+		{
+			min = a[i];
+		}
+	}
+		max = a[0];
+	for(i = 0; i < n; i++)
+	{
+		if(a[i] > max)
+		{
+			max = a[i];
+		}
+	}
+	printf("\ntwo values largest difference is %d and values are %d & %d", max -min, max, min);
+}
+
+Que no 18 Write a c proram to input a sting & store their ascii value in int array
+#include<stdio.h>     
+
+void main()
+{
+
+	char a[100];
+	printf("enter a string:\n");
+	scanf_s("%s",&a);
+	printf(" your string %s\n", a);
+	for (int i = 0; a[i] != '\0'; i++)
+	{
+		printf("Ascii values %d", a[i]);
+	}
+
+}
+
+Que no 19 write a c program to store squre of the elements in the same array
+#include<stdio.h>
+
+ void main()
+ {
+	int a[100], b[100];
+	int i, n, ans= 0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		ans = a[i] * a[i];
+		a[i] = ans;
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("Squre=%d\n", a[i]);
+	}
+ }
+
+Que 20 write a c program to find the two elements such that their sum is closest to give number
+#include<stdio.h>  
+
+void main()
+{
+	int a[100];
+	int i, n,j,sum=0,num=0,diff1 = 0;
+
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+
+	printf("Enter num value:");
+	scanf_s("%d",&num);
+
+	int a1, b1, olddiff = 0;
+	for (i = 0; i < n-1; i++)
+	{
+		for (j =i+1; j < n; j++)
+		{
+			sum = a[i] + a[j];
+
+			if (num > sum)
+			{
+				diff1 = num - sum;
+			}
+			else
+			{
+				diff1 = sum - num;
+			}
+			//olddiff = diff1;
+
+			if (olddiff > diff1)
+			{
+				olddiff = diff1;
+				a1 = a[i];
+				b1 = a[j];
+			}
+
+
+		}
+	}
+	
+	printf("%d\n = ", a1);
+	printf("%d\n = ", b1);
+	printf("%d\n = ", olddiff);
+
+}
+
+Que.21: Find given int X appears more than n / 2 times in sorted array of n int
+#include<stdio.h>
+void main()
+{
+	int a[20], i, n, x, count = 0;
+	printf("enter how many numbers you want to insert : ");
+	scanf_s("%d", &n);
+	printf("enter %d elements : ", n);
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	printf("\nenter a number you want to find more than %d times\n", n / 2);
+	scanf_s("%d", &x);
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] != x)
+			count++;
+	}
+	if (count == 0)
+		printf("%d is not in given array", x);
+	else
+	{
+		count = 0;
+		for(i = 0; i < n; i++)
+		{
+			if (a[i] == x)
+				count++;
+		}
+		if (count > n / 2)
+		{
+			printf("\n%d is appears more than %d i.e %d times", x, n / 2, count);
+		}
+		else {
+			printf("\n%d is appears less than or equal to %d times", x, n / 2);
+		}
+	}
+}
+
+Que 22 Write a c program to find the unioun & intersection of two arrays
+
+#include<stdio.h>
+
+void main()
+{
+	int a[100], b[100],c[100];
+	int i,j,n1,n2;
+	printf("Enter a size of first  array:");
+	scanf_s("%d", &n1);
+	for (i = 0; i < n1; i++)
+	{
+		printf("Enter a first  array element:");
+		scanf_s("%d", &a[i]);
+	}
+	printf("Enter a size of second  array:");
+	scanf_s("%d", &n2);
+	for (i = 0; i < n2; i++)
+	{
+		printf("Enter a second array element:");
+		scanf_s("%d", &b[i]);
+	}
+	for (i = 0; i < n1; i++)
+	{
+		printf("First array %d\n", a[i]);
+	}
+	for (i = 0; i < n2; i++)
+	{
+		printf("second array %d\n", b[i]);
+	}
+	for (i = 0; i < n1; i++)
+	{
+		c[i] = a[i];
+	}
+	for (i = 0; i < n2; i++)
+	{
+		c[j] = b[i];
+	}
+	for (i = 0; i < n1+n2; i++)
+	{
+		printf("thired array %d\n", c[i]);
+	}
+}
+
+Que no 23 Write a C program to find the sum of contiguous subarray within a one dimensional array of numbers 
+which has the largest sum
+#include<stdio.h>
+
+void main()
+{
+	int a[100], b[100], c[100];
+	int i,j,
+		n, sum = 0,max=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i += 2)
+	{
+		for (j = i + 1; j < n; j += 2)
+		{
+			sum = a[i] + a[j];
+		}
+		if (max < sum)
+		{
+			max = sum;
+		}
+	}
+	printf("%d =", max);
+}
+/*Que no 24 write a c program to find the maximum sum of a subsequent numbers in given array
+#include<stdio.h>
+
+void main()
+{
+	int a[100], b[100], c[100];
+	int i,j,
+		n, sum = 0,max=0;
+	printf("Enter a size of array:");
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		printf("Enter a array element:");
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i += 2)
+	{
+		for (j = i + 1; j < n; j += 2)
+		{
+			sum = a[i] + a[j];
+		}
+		if (max < sum)
+		{
+			max = sum;
+		}
+	}
+	printf("%d =", max);
+}
