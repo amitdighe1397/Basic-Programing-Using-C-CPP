@@ -1,0 +1,545 @@
+Q1:Write a C program to print all natural numbers from 1 to n. using while Loop
+# include<stdio.h>
+Void main()
+{
+	Int i=1,n;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<n)
+	{
+		Printf(“%d\n”,i);
+		I++;
+	}
+}
+
+Q2:Write a C program to print all natural numbers in reverse (from n to 1). -Using while loop
+#include<stdio.h>
+Void main()
+{
+Int i=1,n;
+Printf(“enter the number”);
+Scanf(“%d”,&n);	
+While(i<=n)
+{
+	Printf(“%d\n”,n);
+	--n;
+		}
+	}
+	
+Q3:Write a C program to print all alphabets from a to z.  using while loop
+#include<stdio.h>
+Void main()
+{
+Char i=’a’,n;
+Printf(“enter the character”);
+Scanf(“%c”,&n);	
+While(i<=n)
+{
+	Printf(“%c\n”,i);
+	I++;
+		}
+	}
+	
+Q4:Write a C program to print all even numbers between 1 to 100.- using While loop
+#include<stdio.h>
+Void main()
+{
+	Int i=2,n;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<=n)
+	{
+		If(i%2==0)
+		Printf(“%d\n”,i);
+		I++;
+		}
+	}
+	
+Q5:Write a C program to print all odd number between 1 To 100.
+#include<stdio.h>
+Void main()
+{
+	Int i=1,n;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<=n)
+	{
+		If(i%2!=0)
+		Printf(“%d\n”,i);
+		I++;
+		}
+	}
+	
+Q6 :Write a C program to find sum of all natural numbers Between 1 to n.
+#include<stdio.h>
+Void main()
+{
+	Int i=1,n,sum=0;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<=n)
+	{   sum=sum+I;
+		I++;
+		} 
+		Printf(“%d\n”,sum);
+	}
+	
+Q7 :Write a C program to find sum of all even numbers between 1 to n
+#include<stdio.h>
+Void main()
+{
+	Int i=1,n,sum=0;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<=n)
+	{  if(i%2==0)
+	  Sum=sum+I;
+		I++;
+		} 
+		Printf(“%d\n”,sum);
+	}\\7
+Q8 :Write a C program to find sum of all odd numbers Between 1 to n.
+#include<stdio.h>
+Void main()
+{
+Int i=1,n,sum=0;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(i<=n)
+	{  if(i%2!=0)
+	  Sum=sum+I;
+		I++;
+		} 
+		Printf(“sum is :%d\n”,sum);
+		}
+		
+Q9 :Write a C program to print multiplication table of any Number.
+#include<stdio.h>
+Void main()
+{
+Int i=1,n,mul=1;
+Printf(“enter the number”);	
+Scanf(“%d”,&n);
+
+While(i<=10)
+{
+   Mul=n*i;
+   Printf(“%d\n”,mul);
+   i++;	
+}	
+}
+
+Q10 :Write a C program to count number of digits in a Number.
+
+#include<stdio.h>
+Void main()
+{
+Int i=1,n,count=0;
+Printf(“enter the number”);	
+Scanf(“%d”,&n);
+
+While(n>0)
+{
+   n=n/10;
+   count++;	
+}   printf(“%d\n”,count);
+}
+
+Q11:Write a C program to find first and last digit of a number.
+#include<stdio.h>
+Void main()
+{
+Int n,last,first;
+Printf(“enter the number”);	
+Scanf(“%d”,&n);
+Last=n%10;
+Printf(“last number is:%d\n”,last);
+While(n>10)
+{
+   n=n/10;  
+}  first=n;
+ Printf(“first number is:%d\n”,first);
+}
+
+Q12:Write a C program to find sum of first and last digit of a number.
+#include<stdio.h>
+Void main()
+{
+Int n,last,first,sum;
+Printf(“enter the number”);	
+Scanf(“%d”,&n);
+Last=n%10;
+While(n>10)
+   {  n=n/10;
+}  first=n;
+ Sum=last+first;
+ Printf(“sum of first and last number is:d”,sum);
+}
+
+Q13:Write a C program to swap first and last digits of a Number.
+#include<stdio.h>
+Void  main()
+{
+	Int a,b,temp;
+	Printf(“enter the value of a: “);
+	Scanf(“%d”,&a);
+ 	Printf(“enter the value of b:”);
+	Scanf(“%d”,&b);
+	Temp=a;
+	A=b;
+	B=temp;
+	Printf(“the value of a is %d\n”,a);
+	Printf(“the value of a is %d\n”,b);
+	}
+
+Q14:Write a C program to calculate sum of digits of a number.
+#include<stdio.h>
+Void main()
+{
+	Int I,n,sum=0;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(n>0)
+	{
+		i=n%10;
+		Sum=sum+i;
+		n=n/10;
+	}
+	Printf(“sum is:%d\n”,sum);
+}
+
+Q15: Write a C program to calculate product of digits of a number.
+#include<stdio.h>
+Void main()
+{
+	Int I,n,mul=1;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(n>0)
+	{
+		i=n%10;
+		mul=mul*i;
+		n=n/10;
+	}
+	Printf(“sum is:%d\n”,mul);
+} 
+
+Q16:Write a C program to enter a number and print its reverse.
+
+#include<stdio.h>
+Void main()
+{
+	Int n,i,reverse=0;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While(n>0)
+	{	i=n%10;
+	reverse=reverse*10+i;
+	n=n/10;
+	}
+	Printf(“reverse number is:%d\n”,reverse);
+} 
+
+Q17:Write a C program to check whether a number is palindrome or not
+#include<stdio.h>
+Void main()
+{
+	Int n,I,reverse=0,temp;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	Temp=n;
+	While(n>0)
+	{	i=n%10;
+	Reverse=reverse*10+I;
+	N=n/10;
+	}
+	Printf(“reverse number is:%d\n”,reverse);
+	If(temp==reverse)
+	Printf(“the number is palindrome”);
+	Else
+		Printf(“the number is not palindrome”);
+}
+
+Q18:Write a C program to find frequency of each digit in a given integer.
+
+
+Q19: Write a C program to enter a number and print it in Words.
+
+#include<stdio.h>
+Int main()
+{
+	Int n,ans=1,rem;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	While (n>0)
+	{
+		Rem=n%10;
+		Ans=ans*10+rem;
+		N=n/10;
+      	}
+      	While (ans>10)
+      {	
+      Rem=ans%10;
+      	Switch(rem)
+      	{
+      		Case 0:
+      		Printf(“zero\t”);
+      		Break;
+      		Case 1:
+      		Printf(“one\t”);
+      		Break;
+      		Case 2:
+      		Printf(“two\t”);
+      		Break;
+      		Case 3:
+      		Printf(“three\t”);
+      		Break;
+      		Case 4:
+      		Printf(“four\t”);
+      		Break;
+      		Case 5:
+      		Printf(“five\t”);
+      		Break;
+      		Case 6:
+      		Printf(“six\t”);
+      		Break;
+      		Case 7:
+      		Printf(“seven\t”);
+      		Break;
+      		Case 8:
+      		Printf(“eight\t”);
+      		Break;
+      		Case 9:
+      		Printf(“nine\t”);
+      		Break;
+      	}
+      	Ans=ans/10;
+      }
+} 
+
+20. Write a C program to print all ASCII character with Their values.
+#include <stdio.h>
+Void  main()
+{
+    Int I;
+    For(i=0; i<=255; i++) 
+    {
+ Printf(“%c = %d\n”, I, i);
+    }
+}
+
+21. Write a C program to find power of a number using For loop.
+
+#include<stdio.h>
+Void main()
+{
+	Int I,x,y,ans=1;
+	Printf(“enter base”);
+	Scanf(“%d”,&x);
+	Printf(“enter power”);
+		Scanf(“%d”,&y);
+	For (i=1;i<=y;i++)
+	{
+		Ans=ans*x;
+		}
+  		Printf(“%d”,ans);
+  		} 
+
+22. Write a C program to find all factors of a number.
+#include<stdio.h>
+Void main()
+{
+	Int I,n;
+	Printf(“enter the number”);
+	Scanf(“%d”,&n);
+	For (i=1;i<=n;i++)
+	
+		If(n%i==0)
+		{
+  		Printf(“%d\t”,i);
+	}
+} 
+
+23. Write a C program to calculate factorial of a number.
+#include<stdio.h>
+Void main()
+{
+	Int I,x,ans=1;
+	Printf(“enter number”);
+	Scanf(“%d”,&x);
+
+	For (i=1;i<=x;i++)
+	{
+		Ans=ans*I;
+		}
+  		Printf(“%d”,ans);
+  		}
+
+24. Write a C program to find HCF (GCD) of two Numbers.
+#include<stdio.h>
+Void main()
+{
+Char I,n1,n2,ans,min;
+Printf(“enter the n1 and n2”);
+Scanf(“%d%d”,&n1,&n2);	
+If(n1<n2)
+{
+	Min=n1;
+	}
+	Else
+	Min=n1;
+	For(i=1;i<=min;i++)
+	If(n1%i==0&& n2%i==0)
+	Ans=I;
+Printf(“%d”,ans);
+	} 
+
+
+25. Write a C program to find LCM of two numbers.
+
+#include<stdio.h>
+Void main()
+{
+	Int I,n1,n2,max,lcm;
+	Printf(“entet first number”);
+	Scanf(“%d”,&n1);
+	Printf(“enter second number”);
+	Scanf(“%d”,&n2);
+	
+	If(n1<n2)
+	{
+		Max=n2;
+	}
+	Else
+	{
+ 		Max=n1;
+	}
+	While(1)
+	{
+		If (max%n1==0  &&  max%n2==0)
+		{
+			Printf(“%d”,max);
+			Break;
+		}
+Max++;
+}
+	}
+	
+Q26. Write a C program to check whether a number is Prime number or not.
+
+#include<stdio.h>
+void main()
+{
+	int i,n,count=0;
+	printf("enter the number");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+		if(n%i==0)
+		count++;
+	{	
+	if(count==2)
+		printf("number is prime");
+		else 
+		printf("number is not prime");    
+	}
+	} 
+	
+Q27. Write a C program to print all Prime numbers 
+Between 1 to n.
+
+#include<stdio.h>
+void main()
+{
+	int i,n,count=0,j;
+	printf("enter the number");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+			count=0;
+			for(j=1;j<=i;j++)
+			{	
+		if(i%j==0)
+		{
+		count++;
+		}
+			}	
+	if(count==2)
+	{
+		printf("%d\n",i);    
+	}
+			}
+	} 
+	
+28. Write a C program to find sum of all prime numbers Between 1 to n.
+
+#include<stdio.h>
+void main()
+{
+	int i,n,count=0,j,sum=0;
+	printf("enter the number");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		count=0;
+			for(j=1;j<=i;j++)
+			{	
+		if(i%j==0)
+		{
+		count++;
+		}
+			}
+	if(count==2)
+	{
+		sum=sum+i;
+	}	
+		}
+		printf("%d\n",sum);
+	} 
+	
+Q 29. Write a C program to find all prime factors of a Number.
+Q 30. Write a C program to check whether a number is Armstrong number or Not.
+
+#include<stdio.h>
+void main() 
+{
+   int n, orig, rem, i= 0,ans,pow;
+   float result = 0.0;
+   printf("Enter a number: ");
+   scanf("%d", &n);
+   orig= n;
+   for (orig= n; orig>= 0; i++)
+    {
+       orig=orig/10;
+   }
+   for (orig= n; orig>= 0; orig/= 10) {
+       rem = orig% 10;
+      ans= ans+pow*rem;
+   }
+   if (ans== n)
+    printf("%d is an Armstrong number.", n);
+   else
+    printf("%d is not an Armstrong number.", n);
+} 
+
+32. Write a C program to check whether a number is Perfect number or Not.
+#include<stdio.h>  
+Void main()  
+{  
+Int I,n, rem, sum = 0;  
+Printf(“Enter a number”);  
+Scanf(“%d”, &n);      
+For(I = 1; I < n; i++) 
+{  
+    Rem = n % I;  
+   If (rem == 0)  
+   {             
+      sum = sum + I;  
+   }  
+}  
+         If (sum == n)  
+               Printf(“ a Perfect Number”);  
+           Else  
+              Printf(“\n  is not a Perfect Number”)
+}
+
+
