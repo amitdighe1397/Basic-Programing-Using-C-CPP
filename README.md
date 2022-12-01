@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @amitdighe1397
 - 👀 I’m interested in Software development.
-- 🌱 I’m currently learning Programming language as c,java,cpp,sql.
+- 🌱 I’m currently learning Programming language as C,C++,java,sql.
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
