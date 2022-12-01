@@ -1,0 +1,869 @@
+NAME:DIGHE AMIT BALASAHEB
+BATCH:
+ASSIGNMENT:STRING
+Que1 Write a c program to accept string with multiple space from user and print it as it is
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+printf("Enter a string:\n");
+fgets(str, sizeof(str), stdin);
+printf(" your string:%s", str);
+}
+
+Que2 Write a c proram to accept string with multiple space from user ad print it with a singal space
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+printf("Enter a string:\n");
+fgets(str, sizeof(str), stdin);
+printf(" your string:%s", str);
+while (str[i]!='\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+else
+{
+printf("%c", str[i]);
+if (str[i + 1] == ' ')
+{
+printf(" ");
+}
+i++;
+}
+}
+}
+
+ Que3 Write a c program to print count of number character in givan string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,count=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ",str);
+while (str[i]!='\n')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+else if(str[i]!=' ')
+{
+count++;
+}
+i++;
+}
+printf(" count= %d", count);
+}
+
+4 Write a c program to accept string and print it in the revers order.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i=0,count=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i]!='\0')
+{
+count++;
+i++;
+}
+printf("first given string revers");
+i = count;
+while (i>=0)
+{
+printf("%c", str[i]);
+i--;
+}
+}
+
+5 Write a c program to count count of number of vowels and number of consonants in the given 
+string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,vow=0,con=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+if (str[i] == 'a' || str[i]=='A' || str[i] == 'e' || str[i] == 'E' || str[i] == 'i' || str[i] == 'I'
+|| str[i] == 'o' || str[i] == 'O' || str[i] == 'u' || str[i] == 'U')
+{
+vow++;
+}
+else
+{
+con++;
+}
+i++;
+}
+printf("vowels= %d\n", vow);
+printf("consonunt= %d\n", con);
+}
+
+6 Write a c program to revers a given string as below
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,j=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i] != '\n')
+{
+while (str[i] == ' ' && str[i] != '\n')
+{
+i++;
+}
+while (str[i] != ' ' && str[i] != '\n')
+{
+if (str[i] == ' ')
+{
+printf(" ");
+}
+i++;
+}
+j = i - 1;
+while (str[i] != ' ' && str[i] >= 0)
+{
+printf("%c", str[j]);
+j--;
+}
+}
+}
+
+7 write a c program to replace space with '$' in given string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+printf("$");
+i++;
+}
+if (str[i] == ' ')
+{
+i++;
+}
+printf("%c", str[i]);
+i++;
+}
+}
+
+ 8 Write a c program to accept sentance from user and print number of words from that sentence
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, count = 1;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+if (str[i+1]==' ')
+{
+count++;
+i++;
+}
+i++;
+}
+printf("count= %d", count);
+}
+
+ 9 Write a c proram to replace good names in mail
+#include<stdio.h>
+void main()
+{
+char str1[100]="Hello Goodnames";
+char str2[100];
+int i = 0;
+printf("Enter a string:");
+fgets(str1, sizeof(str1), stdin);
+printf("your string:%s", str1);
+while (str1[i]=='\n')
+{
+if (str1[i] != ' ' && str1[i])
+{
+i++;
+}
+else if (str1[i + 1] == ' ')
+{
+printf(" ");
+i++;
+}
+}
+}
+
+10 write a c program to print all fibonacii series upto each ASCII code of alphabetes in given string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,n=0,a=0,b=1,c;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+if (str[i] != ' ')
+{
+n = i;
+}
+c = a + b;
+printf("%d\n", c);
+a = b;
+b = c;
+i++;
+}
+}
+
+ 11 write a c program which accepts a string from user which contains a charater from 'b'to 'y'
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+if (str[i] > 66 && str[i] < 98)
+{
+i++;
+}
+printf("%c", str[i]);
+i++;
+}
+}
+
+12 write a c program which accept sentance from user and print number of small letters,capital 
+letters,space and digit
+from that sentance.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,c=0,s=0,sp=0,d=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\0')
+{
+if (str[i] == 32)
+{
+sp++;
+}
+else if (str[i]>='A' && str[i]<='Z')
+{
+c++;
+}
+else if (str[i] >='a' && str[i]<='z')
+{
+s++;
+}
+else if (str[i]>='0' && str[i]<='9')
+{
+d++;
+}
+i++;
+}
+printf("capital= %d\n", c);
+printf("small= %d\n", s);
+printf("space= %d\n", sp);
+printf("digit= %d\n", d);
+}
+
+13 Write a c program to which accept sentence from user and print number of white spaces from 
+that sentence
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, count = 0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string :%s ", str);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+i++;
+}
+if (str[i + 1] == ' ')
+{
+count++;
+i++;
+}
+i++;
+}
+printf("count= %d", count);
+}
+
+14.Write a C program which accept sentence from user and print number of words of even and 
+odd
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+int count;
+int even = 0;
+int odd = 0;
+printf("enter a string\n");
+fgets(str, sizeof(str), stdin);
+while (str[i] != '\0')
+{
+count = 0;
+while (str[i] != ' ')
+{
+if (str[i] != ' ')
+{
+count++;
+}
+i++;
+}
+if (count % 2 == 0)
+{
+even++;
+}
+else
+{
+odd++;
+}
+i++;
+}
+printf("no of even word=%d\n", even);
+printf("no of odd word=%d", odd);
+}
+
+15 Write a c program with accept sentance from user and print last word from that sentance
+#include<stdio.h>//
+void main()
+{
+char str[100];
+int i = 0,j=0,temp=0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\n')
+{
+i++;
+}
+while (str[i]!=' ')
+{
+//printf("%c", str[i]);
+i--;
+}
+while(str[i] !='\n')
+{
+printf("%c", str[i]);
+i++;
+}
+}
+
+16 Write a c program which accept sentance form user and position from user and print the word 
+at that position
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, n, count = 1;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("enter a position:");
+scanf_s("%d", &n);
+while (str[i] != '\0')
+{
+if (str[i] == ' ')
+{
+count++;
+i++;
+}
+if (n == count)
+{
+printf("position= &d", n);
+printf("words= %", count);
+}
+i++;
+}
+}
+
+ 17 Write a c program to convert the string from upper case to lower case.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\0')
+{
+if (str[i] >= 'A' && str[i] <= 'Z')
+{
+str[i] = str[i] + 32;
+}
+i++;
+}
+printf("lower case string= %s", str);
+}
+
+18 Write a c program which toggles the case of a string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\0')
+{
+if (str[i] >= 'a' && str[i] <= 'z')
+{
+str[i] = str[i] - 32;
+i++;
+}
+if (str[i] >= 'A' && str[i] <= 'Z')
+{
+str[i] = str[i] + 32;
+i++;
+}
+i++;
+}
+printf("Upper case string= %s", str);
+}
+
+19.Write a C program to check whether given strings are Anagram strings or not.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, j = 0, count = 0, count1 = 0, index = 0;
+printf("Please enter a String\n");
+fgets(str, sizeof(str), stdin);
+printf("\nGiven string is \n%s", str);
+while(str[i]!='\n')
+{
+while (str[i] == ' ' && str[i] != '\n')
+{
+i++;
+}
+index = i; count = 0;
+while (str[i] != ' ' && str[i] != '\n')
+{
+count++; i++;
+}
+if (count % 2 == 0)
+{
+j = i - 1;
+while (str[j] != ' ' || j == 0)
+{
+printf("%c", str[j]);
+j--;
+}
+}
+else
+{
+j = index;
+while (str[j] != ' ' && str[j] != '\n')
+{
+printf("%c", str[j]);
+j++;
+}
+}
+if (str[i] == ' ')
+{
+count1 = 0; j = i;
+while (str[j] != '\n')
+{
+if (str[j] != ' ')
+{
+count1 = 1;
+break;
+}
+j++;
+}
+}
+if (count1 == 1)
+{
+printf(" ");
+}
+}
+}
+
+20 Write a c program which accept string from user and copy that string into some another string.
+#include<stdio.h>
+void main()
+{
+char str1[100];
+char str2[100];
+int i = 0;
+printf("Enter a string:");
+fgets(str1, sizeof(str1), stdin);
+printf("your string:%s", str1);
+while (str1[i] != '\0')
+{
+str2[i] = str1[i];
+i++;
+}
+str2[i] = '\0';
+printf(" copy string= %s", str2);
+}
+
+21 Write a c program which accept string from user and copy first n characters into some 
+distination string
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0,n;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+printf("Enter a value of n:");
+scanf_s("%d", &n);
+for(i=0;i<=n;i++)
+{
+printf("%c", str[i]);
+}
+}
+
+ 23 Write a c program which accept two strings from user and append second string after first 
+string
+#include<stdio.h>
+void main()
+{
+char str1[100];
+char str2[100];
+int i = 0, j = 0;
+printf("Enter a first string:");
+fgets(str1, sizeof(str1), stdin);
+printf("your string:%s", str1);
+printf("Enter a second string:");
+fgets(str2, sizeof(str2), stdin);
+while (str1[i] != '\n')
+{
+if (str1[i] == ' ')
+{
+i++;
+}
+printf("%c", str1[i]);
+i++;
+}
+while (str2[j] != '\n')
+{
+if (str2[j] == ' ')
+{
+j++;
+}
+printf("%c", str2[j]);
+j++;
+}
+}
+
+24.Write a C program which accept two strings from user and append N characters of second 
+string after first string.
+#include<stdio.h>
+void main()
+{
+char str1[100];
+char str2[100];
+int i = 0, j = 0, n;
+printf("Enter a first string:");
+fgets(str1, sizeof(str1), stdin);
+printf("Enter a second string:");
+fgets(str2, sizeof(str2), stdin);
+printf("Enter a value of n:");
+scanf_s("%d", &n);
+while (str1[i] != '\n')
+{
+if (str1[i] == ' ')
+{
+i++;
+}
+printf("%c", str1[i]);
+i++;
+}
+for (j = 0; j<n; j++)
+{
+printf("%c", str2[j]);
+}
+}
+
+25.Write a C program which accept two strings from user and compare two strings. If both strings 
+are equal then return 0 otherwise return difference between first mismatch character.
+#include<stdio.h>
+void main()
+{
+char str1[100];
+char str2[100];
+int i = 0, j = 0;
+printf("Enter a first string:");
+fgets(str1, sizeof(str1), stdin);
+printf("your string:%s", str1);
+printf("Enter a second string:");
+fgets(str2, sizeof(str2), stdin);
+printf("your string:%s", str2);
+while (str1[i] != '\n')
+{
+if (str1[i] == str2[j])
+{
+printf("Both are equal");
+break;
+}
+else
+{
+printf("both are Not equal");
+break;
+}
+i++;
+j++;
+}
+}
+
+ 27.Write a C program which accept two strings from user and compare two strings without case 
+sensitivity. If both strings are equal then return 0 otherwise return difference between first 
+mismatch character.
+#include<stdio.h>
+void main()
+{
+char str1[100];
+char str2[100];
+int i = 0, j = 0;
+printf("Enter a first string:");
+fgets(str1, sizeof(str1), stdin);
+printf("your string:%s", str1);
+printf("Enter a second string:");
+fgets(str2, sizeof(str2), stdin);
+printf("your string:%s", str2);
+while (str1[i] != '\n')
+{
+if (str1[i]==str2[j])
+{
+i++;
+j++;
+printf("both are equal");
+break;
+}
+else
+{
+printf("0");
+break;
+}
+i++;
+j++;
+}
+}
+
+28.Write a C program which accept string from user and then reverse the string till first N 
+characters without taking another string.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0;
+int n;
+int temp;
+printf("enter a string\n");
+fgets(str, sizeof(str), stdin);
+printf("enter n no of characters revers\n");
+scanf("%d", &n);
+while (str[i] != '\0')
+{
+while (i <= n && n >= i)
+{
+temp = str[i];
+str[i] = str[n];
+str[n] = temp;
+i++;
+n--;
+}
+i++;
+}
+i = 0;
+while (str[i] != '\0')
+{
+printf("%c", str[i]);
+i++;
+}
+}
+
+ 29.Write a C program which accept string from user and then accept range and reverse the string 
+in that range without taking another string.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, n1, n2,temp;
+printf("enter a string\n");
+fgets(str, sizeof(str), stdin);
+printf("enter n1\n");
+scanf("%d", &n1);
+printf("enter n2\n");
+scanf("%d", &n2);
+while (str[i] != '\0')
+{
+while (n1 <= n2 && n2 >= n1)
+{
+temp = str[n1];
+str[n1] = str[n2];
+str[n2] = temp;
+n1++;
+n2--;
+}
+i++;
+}
+i = 0;
+while (str[i] != '\0')
+{
+printf("%c", str[i]);
+i++;
+}
+}
+
+ 30.Write a C program which accept string from user and reverse words from that string which are 
+of even length.*
+#include<stdio.h>
+void main()
+{
+char str[100];
+char s[100];
+int count = 0, i, j;
+printf("Enter the string\n");
+fgets(str, sizeof(str), stdin);
+i = 0;
+j = 0;
+while (str[i] != '\0')
+{
+j = 0;
+while (str[i] != ' ' && str[i] != '\n')
+{
+s[j] = str[i];
+count++;
+i++;
+j++;
+}
+if (count % 2 == 0)
+{
+j = i - 1;
+while (str[j] != ' ' && j >= 0)
+{
+printf("%c", str[j]);
+j--;
+}
+}
+else
+{
+s[j] = '\0';
+j = 0;
+while (s[j] != '\0')
+{
+printf("%c", s[j]);
+j++;
+}
+}
+printf(" ");
+i++;
+}
+}
+
+ 31.Write a C program which accept string from user and checkwhether string is palindrome or 
+not.
+#include <stdio.h>
+void main()
+{
+char str[100];
+int i=0,j;
+printf("Enter any string: ");
+fgets(str,sizeof(str),stdin);
+while (str[i] != '\0')
+{
+i++;
+}
+i = 0;
+j= i - 1;
+while (i <= j)
+{
+if (str[i] != str[j])
+break;
+i++;
+j--;
+}
+if (i >= j)
+{
+printf("String is Palindrome.");
+}
+else
+{
+printf("String is Not Palindrome.");
+}
+}
+
+32.Write a C program to count number of alphabates, spacesand words in given string.
+#include<stdio.h>
+void main()
+{
+char str[100];
+int i = 0, space = 1, words = 1, alphabets = 0;
+printf("Enter a string:");
+fgets(str, sizeof(str), stdin);
+printf("your string:%s", str);
+while (str[i] != '\n')
+{
+if (str[i] == ' ')
+{
+space++;
+}
+else if (str[i]!=' ')
+{
+alphabets++;
+}
+if (str[i] == ' ')
+{
+words++;
+}
+i++;
+}
+printf("space= %d\n", space);
+printf("alphabet= %d\n", alphabets);
+printf("word= %d\n", word);
+}
