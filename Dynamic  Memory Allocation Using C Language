@@ -1,5 +1,4 @@
 NAME-DIGHE AMIT BALASAHEB
-Batch-PPA11
 1.Write a c program to accept Elements from user and print as it is
 #include<stdio.h>
 #include<stdlib.h>
