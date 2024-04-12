@@ -1,5 +1,4 @@
 NAME:DIGHE AMIT BALASAHEB
-BATCH:
 ASSIGNMENT:STRING
 Que1 Write a c program to accept string with multiple space from user and print it as it is
 #include<stdio.h>
